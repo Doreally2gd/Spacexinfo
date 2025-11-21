@@ -1,3 +1,11 @@
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important; /* Critical fix */
+    position: relative;
+}
+
+
 :root{
     --bg:#07102a;
     --glass: rgba(255,255,255,0.04);
@@ -247,4 +255,5 @@ footer{padding:2.5rem 5%;margin-top:1.6rem;background:linear-gradient(180deg,#05
 .coin-item .coin-price {
     min-width: 70px; /* Reserve space for the price */
     text-align: right; /* Keep numbers aligned cleanly */
+
 }
