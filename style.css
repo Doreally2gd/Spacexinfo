@@ -213,3 +213,38 @@ footer{padding:2.5rem 5%;margin-top:1.6rem;background:linear-gradient(180deg,#05
         display:flex !important; 
     }
 }
+
+
+/* FIX FOR JITTERING/RESIZING LAYOUT */
+.price, 
+.coin-price, 
+.stat-number, 
+.coin-change, 
+#spPrice, 
+#aaplPrice, 
+.feature-card .positive,
+.feature-card .negative {
+    /* 1. Force all numbers to have equal width (like a typewriter) */
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    
+    /* 2. Prevent text from wrapping to a new line if it gets long */
+    white-space: nowrap;
+    
+    /* 3. Ensure it respects width/height */
+    display: inline-block;
+}
+
+/* Specific fix for the coin items in the list to stop them growing */
+.coin-item {
+    /* Prevent the box from changing width based on content */
+    width: 100%; 
+    max-width: 100%;
+    overflow: hidden; /* Cut off text if it somehow gets too huge */
+}
+
+/* Ensure the specific price container inside the list is stable */
+.coin-item .coin-price {
+    min-width: 70px; /* Reserve space for the price */
+    text-align: right; /* Keep numbers aligned cleanly */
+}
