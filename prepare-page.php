@@ -606,6 +606,8 @@ $user_initial = strtoupper(substr($display_username, 0, 1));
             }
         }
     </script>
+    <?php wp_footer(); ?> 
 </body>
 </html>
 <?php $conn->close(); ?>
+
