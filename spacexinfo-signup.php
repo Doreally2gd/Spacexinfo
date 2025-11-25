@@ -417,5 +417,7 @@ $conn->close();
             form.submit(); // This reloads the page and triggers the PHP at the top
         }
     </script>
+    <?php wp_footer(); ?> 
 </body>
+
 </html>
