@@ -343,7 +343,8 @@ $withdrawals = $conn->query("SELECT * FROM withdrawal_requests WHERE status = 'p
         }
     }
 </script>
-
+<?php wp_footer(); ?> 
 </body>
 </html>
 <?php $conn->close(); ?>
+
